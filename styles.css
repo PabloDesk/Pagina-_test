@@ -29,18 +29,40 @@ h1 {
 }
 
 h2 {
-  color: #1b5e20; /* Verde muy oscuro */
+  color: #1b5e20; /* Dar estilo a los subtítulos de cada sección, Verde muy oscuro */
   font-size: 24px;
   border-left: 5px solid #66bb6a; /* El detalle lateral ahora es verde */
   padding-left: 10px;
   margin-bottom: 15px;
 }
 
-header p {
+p { /*Mejorar párrafos y textos normales*/
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+ul { /*Dar estilo a listas de habilidades y estudios*/
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+a { /*Dar estilo a los enlaces*/
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header p { /* Mejorar el subtítulo o descripción */
   font-size: 18px;
   color: #555;
 }
 
-section {
+section { /*Dar estilo a las secciones del CV*/
   margin-bottom: 25px;
 }
