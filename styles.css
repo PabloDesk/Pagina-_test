@@ -1,18 +1,19 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #e8f5e9; /* Verde claro de fondo */
-  color: #222;
+body { /* 1. Fondo general de la página */
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: #0f172a; /* Azul marino muy oscuro (casi negro) */
+  color: #e2e8f0; /* Blanco grisáceo para que no lastime los ojos */
   margin: 0;
-  padding: 20px;
+  padding: 0;
 }
 
-.cv-container {
+.cv-container { /* 2. El contenedor del CV (La "tarjeta" oscura) */
   max-width: 900px;
-  margin: 20px auto; /* Añadí margen arriba y abajo */
-  background-color: white;
-  padding: 40px; /* Un poco más de aire interno */
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sutil sombra para dar profundidad */
+  margin: 40px auto;
+  background-color: #1e293b; /* Un tono un poco más claro que el fondo */
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); /* Sombra pesada para dar profundidad */
+  border: 1px solid rgba(34, 197, 94, 0.1); /* Un borde verde casi invisible */
 }
 
 header {
@@ -22,18 +23,23 @@ header {
   margin-bottom: 30px;
 }
 
-h1 {
-  color: #2e7d32; /* Cambiado a un verde oscuro para combinar con el fondo */
-  font-size: 36px;
-  margin-bottom: 10px;
+h1 { /* 3. Títulos principales */
+  color: #22c55e; /* Verde neón elegante (Green 500 de Tailwind) */
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  margin-bottom: 0;
 }
 
-h2 {
-  color: #1b5e20; /* Dar estilo a los subtítulos de cada sección, Verde muy oscuro */
-  font-size: 24px;
-  border-left: 5px solid #66bb6a; /* El detalle lateral ahora es verde */
-  padding-left: 10px;
-  margin-bottom: 15px;
+h2 { /* 4. Subtítulos de secciones */
+  color: #4ade80; /* Un verde un poco más claro */
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-left: 4px solid #22c55e;
+  padding-left: 15px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 p { /*Mejorar párrafos y textos normales*/
@@ -49,15 +55,6 @@ li {
   margin-bottom: 8px;
 }
 
-a { /*Dar estilo a los enlaces*/
-  color: #2563eb;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 header p { /* Mejorar el subtítulo o descripción */
   font-size: 18px;
   color: #555;
@@ -67,9 +64,36 @@ section { /*Dar estilo a las secciones del CV*/
   margin-bottom: 25px;
 }
 
-img { /*circulo en imagenes*/
+img {
   width: 150px;
+  height: 150px;
+  object-fit: cover;
   border-radius: 50%;
-  margin-top: 15px;
-  border: 3px solid #2563eb;
+  border: 3px solid #22c55e;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.3); /* Resplandor verde */
+  transition: 0.3s;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(34, 197, 94, 0.6);
+}
+
+/* 6. Enlaces y detalles */
+a {
+  color: #4ade80;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease; /* Esto hace que el cambio al pasar el mouse sea suave */
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+a:hover {
+  text-decoration: underline;
 }
