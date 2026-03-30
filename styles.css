@@ -1,38 +1,84 @@
 body { /* 1. Fondo general de la página */
   font-family: 'Space Grotesk', sans-serif;
-  background-color: #0f172a; /* Azul marino muy oscuro (casi negro) */
-  color: #e2e8f0; /* Blanco grisáceo para que no lastime los ojos */
+  background-color: #0f172a;
+  color: #e2e8f0;
   margin: 0;
   padding: 0;
 }
 
-.cv-container { /* 2. El contenedor del CV (La "tarjeta" oscura) */
+.cv-container {
   max-width: 900px;
   margin: 40px auto;
-  background-color: #1e293b; /* Un tono un poco más claro que el fondo */
+  background-color: #1e293b;
   padding: 50px;
   border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); /* Sombra pesada para dar profundidad */
-  border: 1px solid rgba(34, 197, 94, 0.1); /* Un borde verde casi invisible */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(34, 197, 94, 0.1);
 }
 
-header {
-  text-align: center;
-  border-bottom: 2px solid #e0e0e0;
+header { /* 2. Cabecera (Header) */
   padding-bottom: 20px;
   margin-bottom: 30px;
+} /* Eliminamos el borde gris claro para que no rompa el modo oscuro */
+
+.header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
-h1 { /* 3. Títulos principales */
-  color: #22c55e; /* Verde neón elegante (Green 500 de Tailwind) */
-  font-size: 48px;
+.nombre-titulo {
+  text-align: right;
+}
+
+.nombre-titulo h1 {
+  margin: 0;
+  font-size: 48px; /* Tamaño consistente */
+  color: #22c55e;
   font-weight: 700;
   letter-spacing: -0.05em;
-  margin-bottom: 0;
+  line-height: 1.1;
 }
 
-h2 { /* 4. Subtítulos de secciones */
-  color: #4ade80; /* Un verde un poco más claro */
+.nickname {
+  font-size: 22px;
+  color: #94a3b8;
+  font-weight: 300;
+}
+
+.profile-img { /* 3. Imagen de Perfil */
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #22c55e;
+  box-shadow: 0 0 30px rgba(34, 197, 94, 0.3);
+  transition: 0.3s;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(34, 197, 94, 0.5);
+}
+
+.subtitulo-dev { /* 4. Subtítulo destacado */
+  max-width: 85%;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 18px;
+  color: #cbd5e1;
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 15px 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(74, 222, 128, 0.1);
+  line-height: 1.6;
+}
+
+h2 { /* 5. Secciones y Textos */
+  color: #4ade80;
   font-size: 22px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -42,105 +88,39 @@ h2 { /* 4. Subtítulos de secciones */
   margin-bottom: 20px;
 }
 
-p { /*Mejorar párrafos y textos normales*/
-  line-height: 1.6;
-  margin: 8px 0;
+section {
+  margin-bottom: 35px;
 }
 
-ul { /*Dar estilo a listas de habilidades y estudios*/
+p {
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+ul {
   padding-left: 20px;
 }
 
 li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
-header p { /* Mejorar el subtítulo o descripción */
-  font-size: 18px;
-  color: #555;
-}
-
-section { /*Dar estilo a las secciones del CV*/
-  margin-bottom: 25px;
-}
-
-img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #22c55e;
-  box-shadow: 0 0 20px rgba(34, 197, 94, 0.3); /* Resplandor verde */
-  transition: 0.3s;
-}
-
-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(34, 197, 94, 0.6);
-}
-
-/* 6. Enlaces y detalles */
-a {
+a { /* 6. Enlaces y Footer */
   color: #4ade80;
   text-decoration: none;
   font-weight: 500;
-  transition: all 0.3s ease; /* Esto hace que el cambio al pasar el mouse sea suave */
-}
-
-footer {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 14px;
-  color: #64748b;
+  transition: all 0.3s ease;
 }
 
 a:hover {
   text-decoration: underline;
-}
-
-.header-top { /* Ajuste para centrar el bloque de cabecera */
-  display: flex;
-  justify-content: center; /* Esto los mueve al centro de la pantalla */
-  align-items: center;
-  gap: 60px;               /* Este es el espacio "aire" entre tu nombre y la foto */
-  margin-bottom: 40px;
-  flex-wrap: wrap;         /* Si se ve en móvil, la foto bajará solita para no romperse */
-}
-
-.nombre-titulo {
-  text-align: right; /* Alineamos el texto a la derecha para que "apunte" hacia la foto */
-}
-
-.nombre-titulo h1 {
-  margin: 0;
-  font-size: 42px;
   color: #22c55e;
-  line-height: 1.1;
 }
 
-.nickname {
-  font-size: 20px;
-  color: #94a3b8; /* Gris azulado suave */
-  font-weight: 300;
-}
-
-.profile-img { /* Imagen centrada y grande */
-  width: 220px;  /* La subí un poco para que destaque "en grande" */
-  height: 220px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #22c55e;
-  box-shadow: 0 0 30px rgba(34, 197, 94, 0.2);
-}
-
-.subtitulo-dev { /* Subtítulo centrado debajo */
-  max-width: 80%;       /* Para que no sea tan ancho como toda la página */
-  margin: 20px auto;    /* Lo centra horizontalmente */
+footer {
   text-align: center;
-  font-size: 18px;
-  color: #cbd5e1;
-  background-color: rgba(255, 255, 255, 0.03);
-  padding: 15px 30px;
-  border-radius: 12px;
-  border: 1px solid rgba(74, 222, 128, 0.1);
+  margin-top: 50px;
+  padding-bottom: 30px;
+  font-size: 14px;
+  color: #64748b;
 }
