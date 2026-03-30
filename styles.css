@@ -98,17 +98,24 @@ a:hover {
   text-decoration: underline;
 }
 
-.header-top { /* Contenedor que separa Nombre e Imagen */
+.header-top { /* Ajuste para centrar el bloque de cabecera */
   display: flex;
-  justify-content: space-between; /* Manda uno a cada extremo */
-  align-items: center;           /* Los centra verticalmente entre sí */
-  margin-bottom: 30px;
+  justify-content: center; /* Esto los mueve al centro de la pantalla */
+  align-items: center;
+  gap: 60px;               /* Este es el espacio "aire" entre tu nombre y la foto */
+  margin-bottom: 40px;
+  flex-wrap: wrap;         /* Si se ve en móvil, la foto bajará solita para no romperse */
+}
+
+.nombre-titulo {
+  text-align: right; /* Alineamos el texto a la derecha para que "apunte" hacia la foto */
 }
 
 .nombre-titulo h1 {
   margin: 0;
   font-size: 42px;
-  color: #22c55e; /* Tu verde neón */
+  color: #22c55e;
+  line-height: 1.1;
 }
 
 .nickname {
@@ -117,23 +124,23 @@ a:hover {
   font-weight: 300;
 }
 
-.profile-img { /* La imagen en grande a la derecha */
-  width: 200px;  /* Ajusta este tamaño a tu gusto */
-  height: 200px;
+.profile-img { /* Imagen centrada y grande */
+  width: 220px;  /* La subí un poco para que destaque "en grande" */
+  height: 220px;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid #22c55e;
   box-shadow: 0 0 30px rgba(34, 197, 94, 0.2);
 }
 
-
-.subtitulo-dev { /* El subtítulo centrado con color cómodo */
+.subtitulo-dev { /* Subtítulo centrado debajo */
+  max-width: 80%;       /* Para que no sea tan ancho como toda la página */
+  margin: 20px auto;    /* Lo centra horizontalmente */
   text-align: center;
   font-size: 18px;
-  color: #cbd5e1; /* Un blanco hueso muy cómodo para leer en fondo oscuro */
-  background-color: rgba(255, 255, 255, 0.05); /* Un fondo sutil para destacarlo */
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px dashed rgba(74, 222, 128, 0.3); /* Un toque "tech" */
-  margin-top: 20px;
+  color: #cbd5e1;
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 15px 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(74, 222, 128, 0.1);
 }
