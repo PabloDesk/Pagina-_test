@@ -39,12 +39,12 @@ header { /* 2. Cabecera (Header) */
 .nombre-titulo h1 {
   margin: 0;
   font-size: 42px;
-  color: #e2e8f0; /* Nombre en blanco/gris para elegancia */
+  color: #22c55e; /* Nombre en blanco/gris para elegancia */
   line-height: 1;
 }
 
 .nickname {
-  color: #22c55e; /* Tu verde neón para el alias */
+  color: #e2e8f0; /* Tu verde neón para el alias */
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -144,10 +144,11 @@ footer {
   color: #4caf50;            /* Letras en verde neón */
   text-align: left;
   padding: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 2px;
+  font-weight: 800;          /* Negrita extra fuerte */
+  text-transform: uppercase; /* Todo en mayúsculas para mayor impacto */
+  font-size: 14px;           /* Un poco más grande para legibilidad */
+  letter-spacing: 1.5px;     /* Espaciado entre letras para un look moderno */
+  border-bottom: 2px solid #4caf50; /* Línea delgada verde bajo el título */
 }
 
 .cv-table td {
